@@ -1,0 +1,106 @@
+.band h1
+{
+  font-family: 'Long Cang', cursive;
+}
+.container-eat-offer {
+    width: 100%;
+    display: flex;
+    height:99vh;
+}
+.eat-div {
+    cursor:pointer;
+    border: 10px solid wheat;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url(../pic/eat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-div {
+    cursor: pointer;
+    border: 10px solid wheat;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url(../pic/best-deals.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.caption {
+    margin-top: 40%;
+    position: absolute;
+    height: 50%;
+}
+
+.caption4 {
+    margin-top:40%;
+    position: absolute;
+    height: 50%;
+}
+
+.caption2 {
+     opacity: 0.9;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: rgb(14, 13, 13);
+    bottom: 0;
+    
+}
+
+.caption3 {
+    opacity: 0.9;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: rgb(14, 13, 13);
+    color: azure;
+    height: 200px;
+    bottom: 0;
+}
+.caption span {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Long Cang', cursive;
+
+}
+
+.caption h2 {
+    font-size: 2.8rem;
+    color: #9cd9ee;
+    font-family: 'Long Cang', cursive;
+    background-color: black;
+
+}
+.offer-div .caption4 span {
+    background-color: black;
+}
+
+
+.caption4 span {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Long Cang', cursive;
+}
+
+.caption4 h2 {
+    font-size: 2.8rem;
+    color: #9cd9ee;
+    font-family: 'Long Cang', cursive;
+    background-color: black;
+}

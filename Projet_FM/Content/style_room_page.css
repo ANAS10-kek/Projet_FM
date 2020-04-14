@@ -1,0 +1,26 @@
+.showcase_room {
+    height: 70vh;
+    background-image: url(../pic/rooms_pic/showcase_room.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.showcase_room h1 {
+    font-family: 'Long Cang', cursive;
+    background-color: #9cd9ee;
+}
+
+.showcase_room span {
+    background-color: black;
+    
+}
+
+.img-1
+{
+    height: 300px;
+    width: 1200px;
+   
+}

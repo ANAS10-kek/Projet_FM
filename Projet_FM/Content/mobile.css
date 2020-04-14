@@ -1,0 +1,44 @@
+howcase
+{
+    height: max-content;
+}
+.title-showcase h1 {
+
+    font-size: 2.5rem;
+
+
+}
+.links {
+    background-color: #333333;
+    text-align: center;
+    
+}
+.container-eat-offer
+{
+  height: 120vh;
+}
+.eat-div {
+    height: 50%;
+}
+.offer-div
+{
+    height: 50%;
+}
+.caption span {
+    font-size: 1.8rem;
+}
+
+.caption h2 {
+    font-size: 1.8rem;
+}
+.caption4 span {
+    font-size: 1.8rem;
+}
+
+.caption4 h2 {
+    font-size: 1.8rem;
+}
+.room-div div h1
+{
+    font-size: 1.8rem;
+}

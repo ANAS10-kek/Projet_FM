@@ -1,0 +1,16 @@
+.band-eat::before
+{
+    content:" ";
+    position: absolute;
+    height: 100px;
+    border-right: #DF6C4F solid 1px;
+    background-image: url(pic/hotelthumb/hotel/photo-gallery-1.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.ftco-animate
+{
+    border-right:#FFFF 10px solid;
+}

@@ -1,0 +1,15 @@
+.showcase-offers
+{
+    height: 70vh;
+    background-image: url(../pic/offer-pic/showcase-offer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.showcase-offers div h1
+{
+    background-color: #DF6C4F;
+    font-family: 'Long Cang', cursive;
+}

@@ -1,0 +1,102 @@
+.showcase-eat {
+    height: 40vh;
+}
+
+.main h1 {
+    color: black;
+    font-family: 'Long Cang', cursive;
+    background-color: #DF6C4F;
+}
+
+.sec-band-eat {
+    flex-direction: column;
+    height: 30vh;
+}
+
+.band-eat::before {
+    content: " ";
+    position: absolute;
+    height: 100px;
+    border-right: #DF6C4F solid 1px;
+}
+
+.slider-img #my-carousel {
+    width: 800px;
+    overflow: hidden;
+}
+
+.sec-our-menu {
+    height: 25vh;
+    background-color: #DF6C4F;
+}
+
+.sec-our-menu h1 {
+    color: black;
+    font-family: 'Long Cang', cursive;
+    background-color: #9cd9ee;
+}
+
+.sec-menu .div-menu {
+    overflow: hidden;
+    height: 80vh;
+}
+
+.lunch-menu div h1 {
+    font-family: 'Long Cang', cursive;
+    background-color: #9cd9ee;
+}
+
+.diner-menu div h1 {
+    font-family: 'Long Cang', cursive;
+    background-color: #DF6C4F;
+}
+
+.lunch-menu {
+    background-image: url(../pic/menupic/lunch.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px white solid;
+    transition: all .5s linear;
+}
+
+.diner-menu {
+    background-image: url(../pic/menupic/diner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:  5px white solid;
+    transition: all .5s linear;
+}
+.btn_diner,.btn_diner_1
+{
+    text-align: center;  
+}
+.cont_btn_diner,.cont_btn_diner_1 {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    text-decoration: none;
+    background-color: black;
+    width: 220px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    text-align: center;
+} 
+.ligne,.ligne_1
+{
+    border: #DF6C4F 2px solid;
+    position: absolute;
+    text-align: center;
+    color: black;
+    background-color: #9cd9ee;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom:2px;
+    width:60px;
+}
+
+
