@@ -12,7 +12,7 @@
     <link href="~/Content/style.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
-<body>
+<body class="m-0 p-0">
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" id="my_nav">
         <a class="navbar-brand font-weight-bold display-1" href="index.html"><span id="s_nav">AK</span> Hotel</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
@@ -35,13 +35,18 @@
                 <li class="nav-item pr-3">
                     <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
-                <li class="nav-item pr-3">
+                <li class="nav-item  pr-3">
                     <a class="nav-link " href="About.html">About</a>
                 </li>
+                <ul class="navbar-nav navbar-right">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+               
             </ul>
+           
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="container m-0 p-0 body-content">
         @RenderBody()
     </div>
     <section class="footer-section">
