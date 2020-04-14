@@ -1,16 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mon application ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
-
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" id="my_nav">
         <a class="navbar-brand font-weight-bold display-1" href="index.html"><span id="s_nav">AK</span> Hotel</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
@@ -73,7 +75,7 @@
                                 <li class="ftco-animate pr-5">
                                     <a href="#">
                                         <span class="icon-instagram">
-                                            <i class="fa fa-3x fa-instagram" aria-hidden="true"></i></i>
+                                            <i class="fa fa-3x fa-instagram" aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </li>
@@ -104,7 +106,7 @@
                             <h2 class="ftco-heading-2 pb-2"><span id="s_nav">P</span>rivacy</h2>
                             <ul class="list-unstyled bee">
                                 <li><a href="About.html" class="py-2 ">About Us</a></li>
-                                <li><a href="#" id="linkcontact_footer" class="py-2 ">Contact Us</a></li>
+                                <li><a href="#" id="linkcontact_footer" class="py-2 ">Contact Us</a><li>
                             </ul>
                         </div>
                     </div>
@@ -148,14 +150,14 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p>
-                            Copyright &copy; All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> </a>
+                            Copyright &copy; All rights reserved<a> <i class="fa fa-heart" aria-hidden="true"></i> </a>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
     </section>
-
+    <script src="~/Scripts/MyScripts/main.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
