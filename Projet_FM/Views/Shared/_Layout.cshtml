@@ -25,10 +25,10 @@
                     <a>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item pr-3">
-                    <a class="nav-link" href="room&suite.html">Rooms & Suites</a>
+                    <a class="nav-link" href="eat&drink.html">Rooms & Suites</a>
                 </li>
                 <li class="nav-item pr-3">
-                    <a class="nav-link" href="eat&drink.html">Eat & drinks</a>
+                    <a>@Html.ActionLink("Eat & drinks", "Index", "EatDrink", routeValues: null, htmlAttributes: new { @class = "nav-link" })</a>
                 </li>
                 <li class="nav-item pr-3">
                     <a class="nav-link" href="offer.html">Offers</a>
@@ -162,7 +162,7 @@
             </div>
         </footer>
     </section>
-    @Html.Partial("_OngletContact");
+    @Html.Partial("_OngletContact")
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
