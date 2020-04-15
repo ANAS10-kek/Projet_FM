@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/style_eat_offers.css" rel="stylesheet" />
+    <link rel="stylesheet" media="(max-width:600px)" href="~/Content/mobile.css">
 </head>
 <body class="m-0 p-0">
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" id="my_nav">
@@ -44,12 +45,12 @@
             @Html.Partial("_LoginPartial")
         </div>
     </nav>
-    <div class="container m-0 p-0 body-content">
+    <div class="">
         @RenderBody()
     </div>
     <section class="footer-section">
         <footer class="co-footer p-5 fco-section img"
-                style="background: url(pic/canvas.jpg) no-repeat center center/cover;">
+                style="background: url(../../pic/canvas.jpg) no-repeat center center/cover;">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row mb-5">
@@ -109,7 +110,8 @@
                             <h2 class="ftco-heading-2 pb-2"><span id="s_nav">P</span>rivacy</h2>
                             <ul class="list-unstyled bee">
                                 <li><a href="About.html" class="py-2 ">About Us</a></li>
-                                <li><a href="#" id="linkcontact_footer" class="py-2 ">Contact Us</a><li>
+                                <li><a href="#" id="linkcontact_footer" class="py-2 ">Contact Us</a>
+                                <li>
                             </ul>
                         </div>
                     </div>
@@ -160,9 +162,11 @@
             </div>
         </footer>
     </section>
-    <script src="~/Scripts/MyScripts/main.js"></script>
+    @Html.Partial("_OngletContact");
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/MyScripts/main.js"></script>
 </body>
 </html>
