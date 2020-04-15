@@ -13,16 +13,16 @@
     <link href="~/Content/style_eat_offers.css" rel="stylesheet" />
     <link rel="stylesheet" media="(max-width:600px)" href="~/Content/mobile.css">
 </head>
-<body class="m-0 p-0">
+<body>
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" id="my_nav">
-        <a class="navbar-brand font-weight-bold display-1" href="index.html"><span id="s_nav">AK</span> Hotel</a>
+        <a class="navbar-brand font-weight-bold display-1" href="@Url.Action( "Index", "Home")"> <span id="s_nav">AK</span> Hotel </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse links" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active pr-3">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item pr-3">
                     <a class="nav-link" href="room&suite.html">Rooms & Suites</a>
@@ -45,10 +45,10 @@
             @Html.Partial("_LoginPartial")
         </div>
     </nav>
-    <div class="">
+    <div class="body-content m-0 p-0">
         @RenderBody()
     </div>
-    <section class="footer-section">
+    <section class="footer-section position-relative">
         <footer class="co-footer p-5 fco-section img"
                 style="background: url(../../pic/canvas.jpg) no-repeat center center/cover;">
             <div class="overlay"></div>

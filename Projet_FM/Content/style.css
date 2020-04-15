@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     user-select: none;
 }
@@ -9,8 +9,8 @@ h1,h2,h3,h4
     text-transform: capitalize;
 }
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -83,12 +83,10 @@ nav {
 
 .service_cont {
     word-wrap: break-word;
-    width: max-content;
 }
 
 .service_cont i {
     color: #DF6C4F;
-
 }
 
 .room-div {
