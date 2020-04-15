@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Page Offers";
+}
+    <link href="~/Content/style-offers.css" rel="stylesheet" />
+<section class="sec-showcase-offers">
+    <div class="showcase-offers d-flex justify-content-center  align-items-center text-center">
+        <div class=" text-light">
+            <h1 class="display-3 text-light px-3">Stay Connected</h1>
+            <br>
+            <span class="text-light">
+                <i class="fa fa-home" aria-hidden="true"></i><a class="text-light"
+                                                                href="index.html">Home</a>
+            </span>
+        </div>
+    </div>
+</section>
+<div class="col-md-12 container text-light py-5 ">
+    <form id="form1">
+        <div class="w-100 col-md-6 col-md-6 m-auto container-fluid px-5 py-5 bg-dark rounded">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="fname_txt" class="form-control" />
+
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lname_txt" class="form-control" />
+                </div>
+            </div>
+            <div class=" mb-3">
+                <label for="username">Username</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">@@</span>
+                    </div>
+                    <input type="text" id="user_txt" class="form-control col-md-12" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(*)</span></label>
+                <input type="text" id="email_txt" placeholder="you@example.com" class="form-control col-md-12" />
+            </div>
+
+            <div class="mb-3">
+                <label for="address">Address</label>
+                <input type="text" id="adress_txt" placeholder="1234 Main St" class="form-control col-md-12" />
+            </div>
+
+            <div class=" mb-3">
+                <label for="address">Address</label>
+                <input type="text" id="adress2_txt" placeholder="Apartment or suite" class="form-control col-md-12" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 mb-3 d-flex flex-column">
+                    <label for="country">Country</label>
+                    <select class="dropdown btn btn-info" aria-labelledby="dropdownMenuLink">
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3 d-flex flex-column">
+                    <label for="">State</label>
+                    <select class="dropdown btn btn-info" aria-labelledby="dropdownMenuLink">
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                        <option class="dropdown-item" value="">choix...</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="Txt_zip" placeholder="Apartment or suite" ForeColor="red"
+                           class="form-control" />
+                    <div class="invalid-feedback">
+                        Zip code required.
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-end text-center py-3">
+                    <div>
+                        <input type="Submit" value="Submit" id="submit_btn" class="btn btn-info px-5"
+                               runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
