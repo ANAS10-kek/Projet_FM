@@ -1,37 +1,40 @@
-﻿<div class="sec_onglet_contact container-fluid m-0 p-0 d-flex">
-    <div style="background-color: black;"
-         class="container m-0 px-0 py-0 col-md-3 fixed-bottom text-light d-flex justify-content-center flex-column onglet_contact">
-        <div class="col-md-12 text-center  d-flex justify-content-around align-items-center  btn_display ">
-            <h3 class="col-md-10">Contact us</h3>
-            <div class="col-md-2" id="btn_close_open">
-                <span id="fleche"><i class="fa fa-arrow-up  text-primary" aria-hidden="true"></i></span>
-            </div>
-        </div>
-        <div class="div_cacher" id="div_cacher">
-            <div class="from col-md-12 d-flex justify-content-center flex-column ">
-                <div class="container col-md-12 px-0 py-3 m-0">
-                    <input type="text" class="d-inline form-control" name="" placeholder="name" id="">
-                </div>
-                <div class="container col-md-12 px-0 py-3 m-0" class="w-0">
-                    <input type="text" class="d-inline form-control" name="" placeholder="Email" id="">
-                </div>
-                <div class="container col-md-12 px-0 py-3  m-0">
-                    <input type="text" class="d-inline form-control" name="" placeholder="Subject" id="">
-                </div>
-                <div class="container col-md-12 px-0 py-3  m-0">
-                    <textarea class="form-control" name="" id="" cols="30" rows="5"
-                              placeholder="Your message"></textarea>
+﻿@using (Html.BeginForm("_OngletContact", "Shared", FormMethod.Post))
+{
+    <div class="sec_onglet_contact container-fluid m-0 p-0 d-flex">
+        <div style="background-color: black;"
+             class="container m-0 px-0 py-0 col-md-3 fixed-bottom text-light d-flex justify-content-center flex-column onglet_contact">
+            <div class="col-md-12 text-center  d-flex justify-content-around align-items-center  btn_display ">
+                <h3 class="col-md-10">Contact us</h3>
+                <div class="col-md-2" id="btn_close_open">
+                    <span id="fleche"><i class="fa fa-arrow-up  text-primary" aria-hidden="true"></i></span>
                 </div>
             </div>
-            <div class="col-md-12 my-1 d-flex justify-content-center flex-column">
-                <button id="send_email" class="btn btn-info">
-                    <span>Send email</span>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </button>
+            <div class="div_cacher" id="div_cacher">
+                <div class="from col-md-12 d-flex justify-content-center flex-column ">
+                    <div class="container col-md-12 px-0 py-3 m-0">
+                        <input type="text" class="d-inline form-control  col-md-12" name="name" placeholder="name" id="">
+                    </div>
+                    <div class="container col-md-12 px-0 py-3 m-0" >
+                        <input type="text" class="d-inline form-control col-md-12" name="From" placeholder="Email" id="">
+                    </div>
+                    <div class="container col-md-12 px-0 py-3  m-0">
+                        <input type="text" class="d-inline form-control  col-md-12" name="subject" placeholder="Subject" id="">
+                    </div>
+                    <div class="container col-md-12 px-0 py-3  m-0">
+                        <textarea class="form-control col-md-12" name="message" id="" cols="30" rows="5"
+                                  placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 my-1 d-flex justify-content-center flex-column">
+                    <button id="send_email"  type="submit" class="btn btn-info col-md-12">
+                        <span>Send email</span>
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+}
 <div class="box-footer-1 m-0 p-0">
     <a id="button"></a>
 </div>
