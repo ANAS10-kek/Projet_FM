@@ -1,0 +1,11 @@
+﻿@model Projet_FM.Models.Regions
+
+<option value="">--Select your Regions--</option>
+@if(ViewBag.RegionsList != null)
+{
+    foreach (var item in ViewBag.RegionsList)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}
+

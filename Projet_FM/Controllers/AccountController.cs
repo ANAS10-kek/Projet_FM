@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -17,6 +18,7 @@ namespace Projet_FM.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -139,6 +141,7 @@ namespace Projet_FM.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.CountryList = new SelectList(GetCountries(), "Id","Name");
             return View();
         }
 
@@ -147,7 +150,7 @@ namespace Projet_FM.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model, int? countryId, int? stateId, int? cityId)
         {
             if (ModelState.IsValid)
             {
@@ -156,12 +159,6 @@ namespace Projet_FM.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // Pour plus d'informations sur l'activation de la confirmation de compte et de la réinitialisation de mot de passe, visitez https://go.microsoft.com/fwlink/?LinkID=320771
-                    // Envoyer un message électronique avec ce lien
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirmez votre compte", "Confirmez votre compte en cliquant <a href=\"" + callbackUrl + "\">ici</a>");
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -208,15 +205,7 @@ namespace Projet_FM.Controllers
                     // Ne révélez pas que l'utilisateur n'existe pas ou qu'il n'est pas confirmé
                     return View("ForgotPasswordConfirmation");
                 }
-
-                // Pour plus d'informations sur l'activation de la confirmation de compte et de la réinitialisation de mot de passe, visitez https://go.microsoft.com/fwlink/?LinkID=320771
-                // Envoyer un message électronique avec ce lien
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Réinitialiser le mot de passe", "Réinitialisez votre mot de passe en cliquant <a href=\"" + callbackUrl + "\">ici</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
-
             // Si nous sommes arrivés là, un échec s’est produit. Réafficher le formulaire
             return View(model);
         }
@@ -380,7 +369,6 @@ namespace Projet_FM.Controllers
                 }
                 AddErrors(result);
             }
-
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
         }
@@ -480,6 +468,21 @@ namespace Projet_FM.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
+        public ActionResult Index()
+        {
+           
+            return View();
+        }
         #endregion
+       public List<Countries> GetCountries()
+       {
+           List<Countries> countries = db.Countries.ToList();
+           return countries;
+        }
+       // public List<Regions> GetRegions(int Cid)
+       // {
+       //     List<Regions> Regions = db.Regions.Where(r => r.CountryId == Cid).ToList();
+       //     return Regions;
+       // }
     }
 }

@@ -57,6 +57,8 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.InteropServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Threading.Thread" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -182,24 +184,39 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004160340232_init.cs" />
-    <Compile Include="Migrations\202004160340232_init.Designer.cs">
-      <DependentUpon>202004160340232_init.cs</DependentUpon>
+    <Compile Include="Migrations\202004161243301_init.cs" />
+    <Compile Include="Migrations\202004161243301_init.Designer.cs">
+      <DependentUpon>202004161243301_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004160517143_init2.cs" />
-    <Compile Include="Migrations\202004160517143_init2.Designer.cs">
-      <DependentUpon>202004160517143_init2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004160727174_init3.cs" />
-    <Compile Include="Migrations\202004160727174_init3.Designer.cs">
-      <DependentUpon>202004160727174_init3.cs</DependentUpon>
+    <Compile Include="Migrations\202004161515148_init2.cs" />
+    <Compile Include="Migrations\202004161515148_init2.Designer.cs">
+      <DependentUpon>202004161515148_init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Cities.cs">
+      <DependentUpon>Countries.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Countries.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Countries.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Countries.cs">
+      <DependentUpon>Countries.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Countries.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Countries.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MailViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Regions.cs">
+      <DependentUpon>Countries.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -221,7 +238,24 @@
     <Content Include="Content\style_eat_offers.css" />
     <Content Include="Content\style_eat_page.css" />
     <Content Include="Content\style_room_page.css" />
+    <EntityDeploy Include="Models\Countries.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Countries.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Countries.edmx.diagram">
+      <DependentUpon>Countries.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Models\Countries.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Countries.edmx</DependentUpon>
+      <LastGenOutput>Countries.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Countries.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Countries.edmx</DependentUpon>
+      <LastGenOutput>Countries1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -432,8 +466,8 @@
     <Content Include="Views\MailViewModels\Details.cshtml" />
     <Content Include="Views\MailViewModels\Edit.cshtml" />
     <Content Include="Views\MailViewModels\Index.cshtml" />
+    <Content Include="Views\Shared\_DisplayRegions.cshtml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -442,16 +476,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004160340232_init.resx">
-      <DependentUpon>202004160340232_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004161243301_init.resx">
+      <DependentUpon>202004161243301_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004160517143_init2.resx">
-      <DependentUpon>202004160517143_init2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004160727174_init3.resx">
-      <DependentUpon>202004160727174_init3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004161515148_init2.resx">
+      <DependentUpon>202004161515148_init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace Projet_FM.Models
 {
@@ -65,20 +66,51 @@ namespace Projet_FM.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "First name")]
+        public string firstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string lastName { get; set; }
+
+
+        [Required]
         [EmailAddress]
-        [Display(Name = "Courrier électronique")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "La chaîne {0} doit comporter au moins {2} caractères.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The string {0} must contain at least {2} characters.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Mot de passe")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirmer le mot de passe ")]
-        [Compare("Password", ErrorMessage = "Le mot de passe et le mot de passe de confirmation ne correspondent pas.")]
+        [Display(Name = "Confirm Password")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        [Phone]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Required]
+        [Display(Name = "User Name")]
+        public string UserName { get; set; }
+
+
+        public int Cid { get; set; }
+
+        public int Rid { get; set; }
+        public int Cityid { get; set; }
+
+
     }
 
     public class ResetPasswordViewModel
@@ -90,16 +122,19 @@ namespace Projet_FM.Models
 
         [Required]
         [StringLength(100, ErrorMessage = "La chaîne {0} doit comporter au moins {2} caractères.", MinimumLength = 6)]
+        
         [DataType(DataType.Password)]
         [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirmer le mot de passe")]
-        [Compare("Password", ErrorMessage = "Le nouveau mot de passe et le mot de passe de confirmation ne correspondent pas.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Le nouveau mot de passe et le mot de passe de confirmation ne correspondent pas.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
+
+
     }
 
     public class ForgotPasswordViewModel
