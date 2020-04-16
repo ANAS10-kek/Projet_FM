@@ -1,4 +1,5 @@
-﻿@using (Html.BeginForm("_OngletContact", "Shared", FormMethod.Post))
+﻿@model Projet_FM.Models.MailViewModel
+@using (Html.BeginForm("_OngletContact", "Shared", FormMethod.Post,htmlAttributes:new { @id= "ContactUsForm"}))
 {
     <div class="sec_onglet_contact container-fluid m-0 p-0 d-flex">
         <div style="background-color: black;"
@@ -12,21 +13,25 @@
             <div class="div_cacher" id="div_cacher">
                 <div class="from col-md-12 d-flex justify-content-center flex-column ">
                     <div class="container col-md-12 px-0 py-3 m-0">
-                        <input type="text" class="d-inline form-control  col-md-12" name="name" placeholder="name" id="">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your name" })
+                        @Html.ValidationMessageFor(m => m.Name, "dqfq", new { @class = "text-danger   col-md-12" })
+
                     </div>
-                    <div class="container col-md-12 px-0 py-3 m-0" >
-                        <input type="text" class="d-inline form-control col-md-12" name="From" placeholder="Email" id="">
+                    <div class="container col-md-12 px-0 py-3 m-0">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Email" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger   col-md-12" })
                     </div>
                     <div class="container col-md-12 px-0 py-3  m-0">
-                        <input type="text" class="d-inline form-control  col-md-12" name="subject" placeholder="Subject" id="">
+                        @Html.TextBoxFor(m => m.Subject, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject" })
+                        @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger   col-md-12" })
                     </div>
                     <div class="container col-md-12 px-0 py-3  m-0">
-                        <textarea class="form-control col-md-12" name="message" id="" cols="30" rows="5"
-                                  placeholder="Your message"></textarea>
+                        @Html.TextAreaFor(m => m.Message, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject",@cols="30",@rows="5" })
+                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger   col-md-12 " })
                     </div>
                 </div>
                 <div class="col-md-12 my-1 d-flex justify-content-center flex-column">
-                    <button id="send_email"  type="submit" class="btn btn-info col-md-12">
+                    <button id="send_email" type="submit" class="btn btn-info col-md-12">
                         <span>Send email</span>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </button>

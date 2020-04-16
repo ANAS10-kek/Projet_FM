@@ -16,35 +16,38 @@ namespace Projet_FM.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult _OngletContact(string From, string subject, string message, string name)
+        public ActionResult _OngletContact(string Email, string Subject, string Message, string  Name)
         {
-            try
+
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                using (MailMessage mm = new MailMessage("test123.Anas@gmail.com", Email))
                 {
-                    using (MailMessage mm = new MailMessage("test123.Anas@gmail.com", From))
-                    {
-                        mm.IsBodyHtml = true;
-                        mm.Subject = subject;
-                        string body = "  <div style=\"border - top:3px solid #22BCE5\"> </div><span style= \"font-family:Arial;font-size:10pt\" ><b>" + name + "</b>,</hr>" + message + " </ span > ";
-                        mm.Body = body;
-                        SmtpClient smtp = new SmtpClient();
-                        smtp.Host = "smtp.gmail.com";
-                        smtp.EnableSsl = true;
-                        NetworkCredential NetworkCred = new NetworkCredential("test123.Anas@gmail.com", "essahl1@&");
-                        smtp.UseDefaultCredentials = true;
-                        smtp.Credentials = NetworkCred;
-                        smtp.Port = 587;
-                        smtp.Send(mm);
-                    }
-                    return View("Home/Index");
+                    mm.IsBodyHtml = true;
+                    mm.Subject = Subject;
+                    string body = "  <div style=\"border - top:3px solid #22BCE5\"> </div><span style= \"font-family:Arial;font-size:10pt\" ><b>" +Name + "</b>,</hr>" +Message + " </ span > ";
+                    mm.Body = body;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.EnableSsl = true;
+                    NetworkCredential NetworkCred = new NetworkCredential("test123.Anas@gmail.com", "essahl1@&");
+                    smtp.UseDefaultCredentials = true;
+                    smtp.Credentials = NetworkCred;
+                    smtp.Port = 587;
+                    smtp.Send(mm);
                 }
+                return RedirectToAction("Index", "Home");
             }
-            catch (Exception)
+            else
             {
-                ViewBag.Error = "Some Error";
+
+                return RedirectToAction("Index", "Home");
             }
-            return View();
+            //}
+            //catch (Exception)
+            //{
+            //    ViewBag.Error = "Some Error";
+            //}
         }
     }
 }
