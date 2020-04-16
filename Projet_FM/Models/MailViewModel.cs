@@ -8,7 +8,7 @@ namespace Projet_FM.Models
 {
     public class MailViewModel
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
 
         [Required]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projet_FM.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,13 +11,14 @@ namespace Projet_FM.Controllers
 {
     public class SharedController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Shared
         public ActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult _OngletContact(string Email, string Subject, string Message, string  Name)
+        public ActionResult _OngletContact(string Email, string Subject, string Message, string  Name,MailViewModel mailViewModel)
         {
 
             if (ModelState.IsValid)
@@ -36,6 +38,13 @@ namespace Projet_FM.Controllers
                     smtp.Port = 587;
                     smtp.Send(mm);
                 }
+                mailViewModel.Email = Email;
+                mailViewModel.Message = Message;
+                mailViewModel.Name = Name;
+                mailViewModel.Subject = Subject;
+                db.Mails.Add(mailViewModel);
+                db.SaveChanges();
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -43,11 +52,6 @@ namespace Projet_FM.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-            //}
-            //catch (Exception)
-            //{
-            //    ViewBag.Error = "Some Error";
-            //}
         }
     }
 }

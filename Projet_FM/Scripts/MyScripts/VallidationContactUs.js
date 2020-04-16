@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
     $('#ContactUsForm').validate(
         {
-            errorClass: 'help-block animation-slideDown', // You can change the animation class for a different entrance animation - check animations page  
-            errorElement: 'div',
+            errorClass: 'help-block animation-slideDown text-danger',
+            errorElement: 'span',
             errorPlacement: function (error, e) {
                 e.parents('.form-group > div').append(error);
             },
@@ -45,7 +45,6 @@
                 'Name': {
                     required: 'Name is required'
                 }
-
             }
         });
 });

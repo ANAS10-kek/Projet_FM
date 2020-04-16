@@ -175,6 +175,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EatDrinkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailViewModelsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OffersController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
@@ -188,6 +189,10 @@
     <Compile Include="Migrations\202004160517143_init2.cs" />
     <Compile Include="Migrations\202004160517143_init2.Designer.cs">
       <DependentUpon>202004160517143_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004160727174_init3.cs" />
+    <Compile Include="Migrations\202004160727174_init3.Designer.cs">
+      <DependentUpon>202004160727174_init3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -216,6 +221,11 @@
     <Content Include="Content\style_eat_offers.css" />
     <Content Include="Content\style_eat_page.css" />
     <Content Include="Content\style_room_page.css" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\MyScripts\VallidationContactUs.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -290,12 +300,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Scripts\jquery-3.5.0.js" />
-    <Content Include="Scripts\jquery-3.5.0.min.js" />
-    <Content Include="Scripts\jquery-3.5.0.slim.js" />
-    <Content Include="Scripts\jquery-3.5.0.slim.min.js" />
-    <Content Include="Scripts\jquery-3.5.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.5.0.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -421,8 +427,15 @@
     <Content Include="Views\Shared\_OngletContact.cshtml" />
     <Content Include="Views\EatDrink\Index.cshtml" />
     <Content Include="Views\Offers\Index.cshtml" />
+    <Content Include="Views\MailViewModels\Create.cshtml" />
+    <Content Include="Views\MailViewModels\Delete.cshtml" />
+    <Content Include="Views\MailViewModels\Details.cshtml" />
+    <Content Include="Views\MailViewModels\Edit.cshtml" />
+    <Content Include="Views\MailViewModels\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\d\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -438,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004160517143_init2.resx">
       <DependentUpon>202004160517143_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004160727174_init3.resx">
+      <DependentUpon>202004160727174_init3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

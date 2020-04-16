@@ -1,5 +1,5 @@
 ﻿@model Projet_FM.Models.MailViewModel
-@using (Html.BeginForm("_OngletContact", "Shared", FormMethod.Post,htmlAttributes:new { @id= "ContactUsForm"}))
+@using (Html.BeginForm("_OngletContact", "Shared", FormMethod.Post, htmlAttributes: new { @id = "ContactUsForm" }))
 {
     <div class="sec_onglet_contact container-fluid m-0 p-0 d-flex">
         <div style="background-color: black;"
@@ -12,22 +12,30 @@
             </div>
             <div class="div_cacher" id="div_cacher">
                 <div class="from col-md-12 d-flex justify-content-center flex-column ">
-                    <div class="container col-md-12 px-0 py-3 m-0">
-                        @Html.TextBoxFor(m => m.Name, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your name" })
-                        @Html.ValidationMessageFor(m => m.Name, "dqfq", new { @class = "text-danger   col-md-12" })
+                    <div class="container form-group col-md-12 px-0 py-3 m-0">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.Name, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your name" })
+                            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                        </div>
 
                     </div>
-                    <div class="container col-md-12 px-0 py-3 m-0">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Email" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger   col-md-12" })
+                    <div class="container form-group col-md-12 px-0 py-3 m-0">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Email" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "d-inline text-danger" })
+                        </div>
                     </div>
-                    <div class="container col-md-12 px-0 py-3  m-0">
-                        @Html.TextBoxFor(m => m.Subject, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject" })
-                        @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger   col-md-12" })
+                    <div class="container form-group col-md-12 px-0 py-3  m-0">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.Subject, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject" })
+                            @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "d-inline text-danger" })
+                        </div>
                     </div>
-                    <div class="container col-md-12 px-0 py-3  m-0">
-                        @Html.TextAreaFor(m => m.Message, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject",@cols="30",@rows="5" })
-                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger   col-md-12 " })
+                    <div class="container form-group col-md-12 px-0 py-3  m-0">
+                        <div class="col-md-12">
+                            @Html.TextAreaFor(m => m.Message, new { @class = "d-inline form-control  col-md-12", @placeholder = "Enter your Subject", @cols = "30", @rows = "5" })
+                            @Html.ValidationMessageFor(m => m.Message, "", new { @class = "d-inline text-danger" })
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 my-1 d-flex justify-content-center flex-column">
