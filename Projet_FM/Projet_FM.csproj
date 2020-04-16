@@ -433,9 +433,7 @@
     <Content Include="Views\MailViewModels\Edit.cshtml" />
     <Content Include="Views\MailViewModels\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\d\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
