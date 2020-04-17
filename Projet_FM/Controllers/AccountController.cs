@@ -141,7 +141,6 @@ namespace Projet_FM.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.CountryList = new SelectList(GetCountries(), "Id","Name");
             return View();
         }
 
@@ -474,11 +473,7 @@ namespace Projet_FM.Controllers
             return View();
         }
         #endregion
-       public List<Countries> GetCountries()
-       {
-           List<Countries> countries = db.Countries.ToList();
-           return countries;
-        }
+    
        // public List<Regions> GetRegions(int Cid)
        // {
        //     List<Regions> Regions = db.Regions.Where(r => r.CountryId == Cid).ToList();

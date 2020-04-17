@@ -67,37 +67,38 @@
                     @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "d-inline form-control  col-md-12" })
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group ">
                 @Html.LabelFor(m => m.Address, new { @class = "col-form-label" })
                 <div>
                     @Html.TextBoxFor(m => m.Address, new { @class = "d-inline form-control  col-md-12" })
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-5 mb-3 d-flex flex-column">
+            <div class="row col-md-12 m-0 p-0 justify-content-between" >
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
                     <label for="country">Country</label>
-                    <div class="col-md-10">
-                        @Html.DropDownListFor(m => m.Cid, ViewBag.CountryList as SelectList, "--Select name of country", new { @class = "form-control" })
+                    <div class="col-md-12 p-0">
+                        <select name="country" id="country" class="form-control col-md-12">
+                        </select>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 d-flex flex-column">
-                    <label for="">Regions</label>
-                    <div class="col-md-10">
-                        @*@Html.DropDownListFor(m => m.Rid, ViewBag.RegionsList as SelectList, "--Select your regions--", new { @class = "form-control" })*@
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
+                    <label for="">State</label>
+                    <div class="col-md-12 p-0">
+                        <select name="state" id="state" class="form-control col-md-12">
+                        </select>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="text" id="Txt_zip" placeholder="Apartment or suite" ForeColor="red"
-                           class="form-control" />
-                    <div class="invalid-feedback">
-                        Zip code required.
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
+                    <label for="">City</label>
+                    <div class="col-md-12 p-0">
+                        <select name="city" id="city" class="form-control col-md-12">
+                        </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" class="btn btn-primary" value="S'inscrire" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-primary" value="S'inscrire" />
                 </div>
             </div>
             @Html.ValidationSummary("", new { @class = "text-danger" })
@@ -105,23 +106,4 @@
     </div>
 }
 <script src="~/Scripts/jquery-3.4.1.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $("#Rid").change(function () {
-            var countryId = $(this).val();
-            debugger
-            $.ajax({
-                type: "post",
-                url: "/Account/Register?Rid=" + countryId,
-                contentType: "html",
-                success: function (response) {
-                    debugger
-                    $("#Rid").empty();
-                    $("#Rid").append(response);
-                }
-            });
-        });
-
-    });
-</script>
+<script src="~/Scripts/MyScripts/DropDowlist_countries.js"></script>

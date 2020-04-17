@@ -14,9 +14,7 @@ namespace Projet_FM.Models
         {
         }
         public virtual DbSet<MailViewModel> Mails { get; set; }
-        public virtual DbSet<Countries> Countries { get; set; }
-        public virtual DbSet<Cities> Cities { get; set; }
-        public virtual DbSet<Regions> Regions { get; set; }
+   
 
         public static ApplicationDbContext Create()
         {
