@@ -69,12 +69,11 @@
                     $(e).closest('.help-block').remove();
                 },
                 success: function (e) {
-                    alert("fsf");
                     e.closest('.form-group').removeClass('has-success has-error');
                     e.closest('.help-block').remove();
                 },
                 rules: {
-                    'Subject_M': {
+                    'Email_M': {
                         required: true,
                         email: true
                     },
@@ -107,3 +106,5 @@
             });
     });
 </script>
+
+<script src="~/Scripts/MyScripts/main.js"></script>

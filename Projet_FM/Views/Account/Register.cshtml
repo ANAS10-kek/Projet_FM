@@ -20,13 +20,13 @@
     <div class="col-sm-12 container text-light py-5 ">
         <div class="w-100 col-md-6 col-sm-6 m-auto container-fluid px-5 py-5 bg-dark rounded">
             <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 form-group">
                     @Html.LabelFor(m => m.firstName, new { @class = "col-form-label" })
                     <div>
                         @Html.TextBoxFor(m => m.firstName, new { @class = "d-inline form-control  col-md-12" })
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 form-group">
                     @Html.LabelFor(m => m.lastName, new { @class = "col-form-label" })
                     <div>
                         @Html.TextBoxFor(m => m.lastName, new { @class = "d-inline form-control  col-md-12" })
@@ -34,16 +34,18 @@
 
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3  form-group">
                 @Html.LabelFor(m => m.UserName, new { @class = "col-form-label" })
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                <div class="input-group ">
+                    <span class="input-group-prepend">
                         <span class="input-group-text">@@</span>
-                    </div>
-                    @Html.TextBoxFor(m => m.UserName, new { @class = "d-inline form-control  col-md-12" })
+                    </span>
+                    <br />
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "d-block form-control  col-md-12" })
+
                 </div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-group">
                 @Html.LabelFor(m => m.Email, new { @class = "col-form-label" })
                 <div>
                     @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12" })
@@ -74,21 +76,21 @@
                 </div>
             </div>
             <div class="row col-md-12 m-0 p-0 justify-content-between">
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
                     <label for="country">Country</label>
                     <div class="col-md-12 p-0">
                         <select name="Country" id="Country" class="form-control col-md-12">
                         </select>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
                     <label for="">State</label>
                     <div class="col-md-12 p-0">
                         <select name="State" id="State" class="form-control col-md-12">
                         </select>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
+                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
                     <label for="">City</label>
                     <div class="col-md-12 p-0">
                         <select name="City" id="City" class="form-control col-md-12">
@@ -116,7 +118,7 @@
                 errorClass: 'help-block animation-slideDown text-danger',
                 errorElement: 'span',
                 errorPlacement: function (error, e) {
-                    e.parents('.form-control').append(error);
+                    e.parents('.form-group > div').append(error);
                 },
                 highlight: function (e) {
 
@@ -131,7 +133,6 @@
                     'firstName': {
                         required: true
                     },
-
                     'lastName': {
                         required: true
                     },
