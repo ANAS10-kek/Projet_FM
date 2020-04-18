@@ -14,7 +14,7 @@
         </div>
     </div>
 </section>
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formRegister" }))
 {
     @Html.AntiForgeryToken()
     <div class="col-sm-12 container text-light py-5 ">
@@ -73,37 +73,39 @@
                     @Html.TextBoxFor(m => m.Address, new { @class = "d-inline form-control  col-md-12" })
                 </div>
             </div>
-            <div class="row col-md-12 m-0 p-0 justify-content-between" >
+            <div class="row col-md-12 m-0 p-0 justify-content-between">
                 <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
                     <label for="country">Country</label>
                     <div class="col-md-12 p-0">
-                        <select name="country" id="country" class="form-control col-md-12">
+                        <select name="Country" id="Country" class="form-control col-md-12">
                         </select>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
                     <label for="">State</label>
                     <div class="col-md-12 p-0">
-                        <select name="state" id="state" class="form-control col-md-12">
+                        <select name="State" id="State" class="form-control col-md-12">
                         </select>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1">
                     <label for="">City</label>
                     <div class="col-md-12 p-0">
-                        <select name="city" id="city" class="form-control col-md-12">
+                        <select name="City" id="City" class="form-control col-md-12">
                         </select>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" class="btn btn-primary" value="S'inscrire" />
+                    <button class="btn btn-primary" value="" onclick="$('#formRegister').submit();">Register  <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+
                 </div>
             </div>
             @Html.ValidationSummary("", new { @class = "text-danger" })
         </div>
     </div>
 }
+
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/MyScripts/DropDowlist_countries.js"></script>

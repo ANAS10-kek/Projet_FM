@@ -184,13 +184,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004161243301_init.cs" />
-    <Compile Include="Migrations\202004161243301_init.Designer.cs">
-      <DependentUpon>202004161243301_init.cs</DependentUpon>
+    <Compile Include="Migrations\202004180511462_init.cs" />
+    <Compile Include="Migrations\202004180511462_init.Designer.cs">
+      <DependentUpon>202004180511462_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004161515148_init2.cs" />
-    <Compile Include="Migrations\202004161515148_init2.Designer.cs">
-      <DependentUpon>202004161515148_init2.cs</DependentUpon>
+    <Compile Include="Migrations\202004180519270_init2.cs" />
+    <Compile Include="Migrations\202004180519270_init2.Designer.cs">
+      <DependentUpon>202004180519270_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004180714043_init3.cs" />
+    <Compile Include="Migrations\202004180714043_init3.Designer.cs">
+      <DependentUpon>202004180714043_init3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -227,6 +231,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\MyScripts\ContactUs.js" />
     <Content Include="Scripts\MyScripts\DropDowlist_countries.js" />
     <Content Include="Scripts\MyScripts\VallidationContactUs.js" />
     <Content Include="favicon.ico" />
@@ -435,6 +440,7 @@
     <Content Include="Views\MailViewModels\Edit.cshtml" />
     <Content Include="Views\MailViewModels\Index.cshtml" />
     <Content Include="Views\Shared\_DisplayRegions.cshtml" />
+    <Content Include="Views\Shared\OngletContact_.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -447,11 +453,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004161243301_init.resx">
-      <DependentUpon>202004161243301_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004180511462_init.resx">
+      <DependentUpon>202004180511462_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004161515148_init2.resx">
-      <DependentUpon>202004161515148_init2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004180519270_init2.resx">
+      <DependentUpon>202004180519270_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004180714043_init3.resx">
+      <DependentUpon>202004180714043_init3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

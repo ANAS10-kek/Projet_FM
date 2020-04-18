@@ -149,11 +149,11 @@ namespace Projet_FM.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model, int? countryId, int? stateId, int? cityId)
+        public async Task<ActionResult> Register(RegisterViewModel model, string country, string state, string city)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email ,Address=model.Address,firstName=model.firstName,lastName=model.lastName,City=city,Country=country,State=state };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -163,8 +163,6 @@ namespace Projet_FM.Controllers
                 }
                 AddErrors(result);
             }
-
-            // Si nous sommes arrivés là, un échec s’est produit. Réafficher le formulaire
             return View(model);
         }
 

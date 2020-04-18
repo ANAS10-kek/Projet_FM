@@ -105,10 +105,17 @@ namespace Projet_FM.Models
         public string UserName { get; set; }
 
 
-        public int Cid { get; set; }
+        //[Required]
+        //[Display(Name = "Country")]
+        //public string Country { get; set; }
 
-        public int Rid { get; set; }
-        public int Cityid { get; set; }
+        //[Required]
+        //[Display(Name = "State")]
+        //public string State { get; set; }
+
+        //[Required]
+        //[Display(Name = "City")]
+        //public string City { get; set; }
 
 
     }

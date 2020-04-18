@@ -18,16 +18,16 @@ namespace Projet_FM.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult _OngletContact(string Email, string Subject, string Message, string  Name,MailViewModel mailViewModel)
+        public ActionResult _OngletContact(string Email_M, string Subject_M, string Message_M, string  Name_M,MailViewModel mailViewModel)
         {
 
             if (ModelState.IsValid)
             {
-                using (MailMessage mm = new MailMessage("test123.Anas@gmail.com", Email))
+                using (MailMessage mm = new MailMessage("test123.Anas@gmail.com", Email_M))
                 {
                     mm.IsBodyHtml = true;
-                    mm.Subject = Subject;
-                    string body = "  <div style=\"border - top:3px solid #22BCE5\"> </div><span style= \"font-family:Arial;font-size:10pt\" ><b>" +Name + "</b>,</hr>" +Message + " </ span > ";
+                    mm.Subject = Subject_M;
+                    string body = "  <div style=\"border - top:3px solid #22BCE5\"> </div><span style= \"font-family:Arial;font-size:10pt\" ><b>" + Name_M + "</b>,</hr>" + Message_M + " </ span > ";
                     mm.Body = body;
                     SmtpClient smtp = new SmtpClient();
                     smtp.Host = "smtp.gmail.com";
@@ -38,10 +38,10 @@ namespace Projet_FM.Controllers
                     smtp.Port = 587;
                     smtp.Send(mm);
                 }
-                mailViewModel.Email = Email;
-                mailViewModel.Message = Message;
-                mailViewModel.Name = Name;
-                mailViewModel.Subject = Subject;
+                mailViewModel.Email_M = Email_M;
+                mailViewModel.Message_M = Message_M;
+                mailViewModel.Name_M = Name_M;
+                mailViewModel.Subject_M = Subject_M;
                 db.Mails.Add(mailViewModel);
                 db.SaveChanges();
 

@@ -32,7 +32,8 @@ $(document).ready(function () {
         if (a == false) {
             $("#fleche i").removeClass("fa-arrow-up text-primary");
             $("#fleche i").addClass("fa-arrow-down text-danger");
-            $(".btn_display").css('background-color','#25728b');
+            $(".btn_display").css('background-color', '#25728b');
+            $("#ContactUsForm").remove();
             a = true;
         }
         else
