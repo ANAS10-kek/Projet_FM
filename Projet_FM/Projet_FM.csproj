@@ -232,6 +232,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\MyScripts\DropDowlist_countries.js" />
+    <Content Include="Scripts\MyScripts\RegisterFormValidation.js" />
     <Content Include="Scripts\MyScripts\VallidationContactUs.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
