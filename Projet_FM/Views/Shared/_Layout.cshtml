@@ -162,11 +162,12 @@
             </div>
         </footer>
     </section>
-    @Html.Partial("OngletContact_", new Projet_FM.Models.MailViewModel());
+    @Html.Partial("_OngletContact", new Projet_FM.Models.MailViewModel());
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/MyScripts/main.js"></script>
     <script src="~/Scripts/MyScripts/VallidationContactUs.js"></script>

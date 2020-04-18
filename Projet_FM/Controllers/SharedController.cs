@@ -18,7 +18,7 @@ namespace Projet_FM.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult _OngletContact(string Email_M, string Subject_M, string Message_M, string  Name_M,MailViewModel mailViewModel)
+        public ActionResult _OngletContact(string Email_M, string Subject_M, string Message_M, string Name_M, MailViewModel mailViewModel)
         {
 
             if (ModelState.IsValid)
@@ -44,14 +44,14 @@ namespace Projet_FM.Controllers
                 mailViewModel.Subject_M = Subject_M;
                 db.Mails.Add(mailViewModel);
                 db.SaveChanges();
-
                 return RedirectToAction("Index", "Home");
             }
             else
             {
-
                 return RedirectToAction("Index", "Home");
             }
+            
+
         }
     }
 }

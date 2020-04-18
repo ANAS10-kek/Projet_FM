@@ -231,7 +231,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <Content Include="Scripts\MyScripts\ContactUs.js" />
     <Content Include="Scripts\MyScripts\DropDowlist_countries.js" />
     <Content Include="Scripts\MyScripts\VallidationContactUs.js" />
     <Content Include="favicon.ico" />
@@ -439,8 +438,6 @@
     <Content Include="Views\MailViewModels\Details.cshtml" />
     <Content Include="Views\MailViewModels\Edit.cshtml" />
     <Content Include="Views\MailViewModels\Index.cshtml" />
-    <Content Include="Views\Shared\_DisplayRegions.cshtml" />
-    <Content Include="Views\Shared\OngletContact_.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

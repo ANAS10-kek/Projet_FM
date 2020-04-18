@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $('#ContactUsForm').validate(
         {
+            
             errorClass: 'help-block animation-slideDown text-danger',
             errorElement: 'span',
             errorPlacement: function (error, e) {
@@ -12,37 +13,38 @@
                 $(e).closest('.help-block').remove();
             },
             success: function (e) {
+                alert("fsf");
                 e.closest('.form-group').removeClass('has-success has-error');
                 e.closest('.help-block').remove();
             },
             rules: {
-                'Email': {
+                'Subject_M': {
                     required: true,
                     email: true
                 },
 
-                'Name': {
+                'Name_M': {
                     required: true
                 },
-                'Subject': {
+                'Subject_M': {
                     required: true
                 },
-                'Message': {
+                'Subject_M': {
                     required: true
                 },
             },
             messages: {
-                'Email':
+                'Email_M':
                 {
                     required: 'Please enter valid email address'
                 },
-                'Message': {
+                'Message_M': {
                     required: 'Message is required'
                 },
-                'Subject': {
+                'Subject_M': {
                     required: 'Subject is required'
                 },
-                'Name': {
+                'Name_M': {
                     required: 'Name is required'
                 }
             }

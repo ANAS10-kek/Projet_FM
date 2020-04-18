@@ -15,13 +15,12 @@ $(document).ready(function () {
     $(document).on('change', '#Country', function () {
         $('#State').html('<option disabled selected value="">---Select your State---</option>');
         var Country_id = $(this).val();
-        console.log(Hi);
         if (Country_id != '') {
             var jqxhr1 = $.getJSON("../Content/JsonFile/states.json", function (data) {
 
                 $.each(data, function (key, value) {
-
-                    if (value.Country_id == Country_id) {
+                    if (value.country_id == Country_id) {
+                       
                         $('#State').html($('#State').html() + '<option value="' + value.state_code + '">' + value.name + '</option>');
                     }
                 });
