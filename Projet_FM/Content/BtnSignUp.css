@@ -1,0 +1,106 @@
+﻿
+/*@media only (max-width : 480px) {
+    #title {
+        font-size: 56px;
+    }
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #1b5bc4;
+}
+
+#title {
+    font-size: 3rem;
+}
+
+#title_ourteam {
+    position: relative;
+}
+
+    #title_ourteam:before {
+        content: "";
+        border-top: solid 1px #bebebe;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        z-index: 0;
+    }
+
+    #title_ourteam span {
+        background: #fff;
+        padding: 0 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+i, .showcase {
+    height: max-content;
+}
+
+.abcRioButtonContentWrapper {
+    width: 100%;
+}
+
+.btnGoogle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    /*padding: 1rem 2rem;*/
+    padding: 0px 70px 0px 0px;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    /*width: max-content;*/
+    height: max-content;
+    background-color: #4285f4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+}
+
+
+.google-icon {
+    margin: 0px;
+    padding: 0;
+}
+
+.btn-text {
+    margin: 0px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Roboto";
+}
+
+.google-btn:hover {
+    box-shadow: 0 0 6px #4285f4;
+}
+
+.google-btn:active {
+    background: #1669F2;
+}
+
+.btnFacebook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    /*padding: 1rem 2rem;*/
+    padding: 0px 70px 0px 0px;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    /*width: max-content;*/
+    height: 50px;
+    background-color: #1b5bc4;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+}

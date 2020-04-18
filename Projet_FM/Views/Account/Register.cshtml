@@ -14,87 +14,88 @@
         </div>
     </div>
 </section>
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formRegister" }))
-{
-    @Html.AntiForgeryToken()
-    <div class="col-sm-12 container text-light py-5 ">
-        <div class="w-100 col-md-6 col-sm-6 m-auto container-fluid px-5 py-5 bg-dark rounded">
-            <div class="row">
-                <div class="col-md-6 mb-3 form-group">
-                    @Html.LabelFor(m => m.firstName, new { @class = "col-form-label" })
-                    <div>
-                        @Html.TextBoxFor(m => m.firstName, new { @class = "d-inline form-control  col-md-12" })
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3 form-group">
-                    @Html.LabelFor(m => m.lastName, new { @class = "col-form-label" })
-                    <div>
-                        @Html.TextBoxFor(m => m.lastName, new { @class = "d-inline form-control  col-md-12" })
-                    </div>
 
-                </div>
-            </div>
-            <div class="mb-3  form-group">
-                @Html.LabelFor(m => m.UserName, new { @class = "col-form-label" })
-                <div class="input-group ">
-                    <span class="input-group-prepend">
-                        <span class="input-group-text">@@</span>
-                    </span>
-                    <br />
-                    @Html.TextBoxFor(m => m.UserName, new { @class = "d-block form-control  col-md-12" })
-
-                </div>
-            </div>
-            <div class="mb-3 form-group">
-                @Html.LabelFor(m => m.Email, new { @class = "col-form-label" })
-                <div>
-                    @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.Password, new { @class = "col-form-label" })
-                <div>
-                    @Html.PasswordFor(m => m.Password, new { @class = "d-inline form-control  col-md-12" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-form-label" })
-                <div>
-                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "d-inline form-control  col-md-12" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-form-label" })
-                <div>
-                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "d-inline form-control  col-md-12" })
-                </div>
-            </div>
-            <div class="form-group ">
-                @Html.LabelFor(m => m.Address, new { @class = "col-form-label" })
-                <div>
-                    @Html.TextBoxFor(m => m.Address, new { @class = "d-inline form-control  col-md-12" })
-                </div>
-            </div>
-            <div class="row col-md-12 m-0 p-0 justify-content-between">
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
-                    <label for="country">Country</label>
-                    <div class="col-md-12 p-0">
-                        <select name="Country" id="Country" class="form-control col-md-12">
-                        </select>
+<div class="text-light py-5 col-sm-8 m-auto container-fluid px-5 py-5 bg-dark rounded d-flex">
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formRegister" }))
+    {
+        <div class="w-100 col-md-8 col-sm-8 m-auto container-fluid px-5 py-5 bg-dark rounded">
+            <div class="">
+                @Html.AntiForgeryToken()
+                <div class="row btn-group-sm">
+                    <div class="col-md-6 mb-3 form-group">
+                        @Html.LabelFor(m => m.firstName, new { @class = "col-form-label" })
+                        <div>
+                            @Html.TextBoxFor(m => m.firstName, new { @class = "d-inline form-control  col-md-12" })
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 form-group">
+                        @Html.LabelFor(m => m.lastName, new { @class = "col-form-label" })
+                        <div>
+                            @Html.TextBoxFor(m => m.lastName, new { @class = "d-inline form-control  col-md-12" })
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
-                    <label for="">State</label>
-                    <div class="col-md-12 p-0">
-                        <select name="State" id="State" class="form-control col-md-12">
-                        </select>
+                <div class="mb-3  form-group">
+                    @Html.LabelFor(m => m.UserName, new { @class = "col-form-label" })
+                    <div class="input-group ">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text">@@</span>
+                        </span>
+                        <br />
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "d-block form-control  col-md-12" })
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
-                    <label for="">City</label>
-                    <div class="col-md-12 p-0">
-                        <select name="City" id="City" class="form-control col-md-12">
-                        </select>
+                <div class="mb-3 form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-form-label" })
+                    <div>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "d-inline form-control  col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-form-label" })
+                    <div>
+                        @Html.PasswordFor(m => m.Password, new { @class = "d-inline form-control  col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-form-label" })
+                    <div>
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "d-inline form-control  col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-form-label" })
+                    <div>
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "d-inline form-control  col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(m => m.Address, new { @class = "col-form-label" })
+                    <div>
+                        @Html.TextBoxFor(m => m.Address, new { @class = "d-inline form-control  col-md-12" })
+                    </div>
+                </div>
+                <div class="row col-md-12 m-0 p-0 justify-content-between">
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="country">Country</label>
+                        <div class="col-md-12 p-0">
+                            <select name="Country" id="Country" class="form-control col-md-12">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="">State</label>
+                        <div class="col-md-12 p-0">
+                            <select name="State" id="State" class="form-control col-md-12">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="">City</label>
+                        <div class="col-md-12 p-0">
+                            <select name="City" id="City" class="form-control col-md-12">
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,8 +107,12 @@
             </div>
             @Html.ValidationSummary("", new { @class = "text-danger" })
         </div>
+    }
+    <div>
+        @Html.Partial("_ExternalLoginsListPartial", new Projet_FM.Models.ExternalLoginListViewModel())
     </div>
-}
+</div>
+
 
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery.validate.js"></script>
@@ -209,5 +214,6 @@
                     }
                 }
             });
-    });</script>
+    });
+</script>
 <script src="~/Scripts/MyScripts/DropDowlist_countries.js"></script>
