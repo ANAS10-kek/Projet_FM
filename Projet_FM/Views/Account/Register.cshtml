@@ -3,6 +3,98 @@
     ViewBag.Title = "Register";
 }
 <link href="~/Content/style-offers.css" rel="stylesheet" />
+<section class="d-flex col-md-12 m-0 p-0">
+    <div class="sec-showcase-offers col-md-4 p-0 m-0">
+        <div class="showcase-offers d-flex col-md-12 justify-content-center  align-items-center text-center">
+            <div class=" text-light">
+                <h1 class="display-4 text-light px-2">Stay Connected</h1>
+                <br>
+                <span class="text-light">
+                    <i class="fa fa-home" aria-hidden="true"></i><a class="text-light"
+                                                                    href="index.html">Home</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="signup-form col-md-8 px-3 py-3 m-0">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formRegister" }))
+        {
+            <div class="col-md-6">
+                <div class=" row justify-content-between col-md-12 m-0 p-0">
+                    <div class="form-input col-md-6 ">
+                        <label for="first_name " class="required ">First name</label>
+                        <input type="text" name="first_name " id="first_name " />
+                    </div>
+                    <div class="form-input col-md-6 ">
+                        <label for="last_name " class="required ">Last name</label>
+                        <input type="text" name="last_name " id="last_name " />
+                    </div>
+                </div>
+                <div class="form-input col-md-12">
+                    <label for="username " class="required">Username</label>
+                    <input type="text" id="user_txt " />
+                </div>
+                <div class="form-input col-md-12">
+                    <label for="email " class="required ">Email</label>
+                    <input type="text" name="email " id="email " />
+                </div>
+                <div class="form-input col-md-12">
+                    <label for="phone_number " class="required ">Phone number</label>
+                    <input type="text" name="phone_number " id="phone_number " />
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-form-label" })
+                    <div>
+                        @Html.PasswordFor(m => m.Password, new { @class = "d-inline form-control col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-form-label" })
+                    <div>
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "d-inline form-control col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-form-label" })
+                    <div>
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "d-inline form-control col-md-12" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(m => m.Address, new { @class = "col-form-label" })
+                    <div>
+                        @Html.TextBoxFor(m => m.Address, new { @class = "d-inline form-control col-md-12" })
+                    </div>
+                </div>
+                <div class="row col-md-12 m-0 p-0 justify-content-between">
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="country">Country</label>
+                        <div class="col-md-12 p-0">
+                            <select name="Country" id="Country" class="form-control col-md-12">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="">State</label>
+                        <div class="col-md-12 p-0">
+                            <select name="State" id="State" class="form-control col-md-12">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex flex-column m-0 p-1 form-group">
+                        <label for="">City</label>
+                        <div class="col-md-12 p-0">
+                            <select name="City" id="City" class="form-control col-md-12">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
+</section>
+
 <section class="sec-showcase-offers">
     <div class="showcase-offers d-flex justify-content-center  align-items-center text-center">
         <div class=" text-light">
@@ -16,8 +108,7 @@
 </section>
 
 <div class="text-light py-5 col-sm-8 m-auto container-fluid px-5 py-5 bg-dark rounded d-flex">
-    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formRegister" }))
-    {
+  
         <div class="w-100 col-md-8 col-sm-8 m-auto container-fluid px-5 py-5 bg-dark rounded">
             <div class="">
                 @Html.AntiForgeryToken()

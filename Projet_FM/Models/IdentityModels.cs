@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Projet_FM.Models;
@@ -11,7 +12,7 @@ namespace Projet_FM.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        [Display(Name = "First name")]
+        [Display(Name = "First Name")]
         public string firstName { get; set; }
 
         [Required]

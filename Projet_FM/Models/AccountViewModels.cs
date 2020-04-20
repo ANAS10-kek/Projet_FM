@@ -104,20 +104,6 @@ namespace Projet_FM.Models
         [Display(Name = "User Name")]
         public string UserName { get; set; }
 
-
-        //[Required]
-        //[Display(Name = "Country")]
-        //public string Country { get; set; }
-
-        //[Required]
-        //[Display(Name = "State")]
-        //public string State { get; set; }
-
-        //[Required]
-        //[Display(Name = "City")]
-        //public string City { get; set; }
-
-
     }
 
     public class ResetPasswordViewModel
