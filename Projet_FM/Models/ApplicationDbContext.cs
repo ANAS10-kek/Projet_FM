@@ -16,7 +16,6 @@ namespace Projet_FM.Models
         {
 
         }
-
         public virtual DbSet<MailViewModel> Mails { get; set; }
 
         public static ApplicationDbContext Create()
